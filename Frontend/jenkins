@@ -4,7 +4,7 @@ node{
     }
   stage('build'){
        nodejs(NodeJSInstallationName: 'Nodejs18.12.1'){
-           sh "npm install"
+           sh: "npm install"
        }
    }
 }
