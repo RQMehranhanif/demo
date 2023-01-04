@@ -1,1 +1,1 @@
-<h1>how to connect with change jenkins</h1>
+<h1>how to connect with jenkins</h1>
