@@ -1,4 +1,4 @@
-pipline{
+node{
     stage('git'){
         git branch: 'frontend', credentialsId: 'test', url: 'https://github.com/RQMehranhanif/demo.git'
     }
