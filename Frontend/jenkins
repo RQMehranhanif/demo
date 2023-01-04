@@ -1,0 +1,14 @@
+node{
+    stage('git'){
+        git branch: 'frontend', credentialsId: 'test', url: 'https://github.com/RQMehranhanif/demo.git'
+    }
+    stage('build'){
+        sh: 'npm install'
+        sh: 'npm run biuld'
+       }
+    stage('nexus'){
+     nexusArtifactUploader credentialsId: '045', groupId: 'nexus-react', nexusUrl: 'nexus.vitalanalytics.net:8081', nexusVersion: 'nexus3', protocol: 'http', repository: 'npm-repo', version: '0.0.1'
+     
+   
+       }
+}
