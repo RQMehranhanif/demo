@@ -7,7 +7,7 @@ node{
         sh: 'npm run biuld'
        }
     stage('nexus'){
-    nexusArtifactUploader artifacts: [[artifactId: 'test', classifier: '', file: 'jenkins', type: 'js,php']], credentialsId: '045', groupId: 'test', nexusUrl: 'nexus.vitalanalytics.net:8081', nexusVersion: 'nexus3', protocol: 'http', repository: 'npm-repo', version: '1.0.1'
+   nexusArtifactUploader artifacts: [[artifactId: 'vitana', classifier: '', file: 'Frontend/package.json', type: 'json']], credentialsId: '045', groupId: '1', nexusUrl: 'nexus.vitalanalytics.net:8081', nexusVersion: 'nexus3', protocol: 'http', repository: 'npm-repo', version: '1'
      
    
        }
