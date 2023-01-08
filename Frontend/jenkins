@@ -3,12 +3,8 @@ node{
         git branch: 'frontend', credentialsId: 'test', url: 'https://github.com/RQMehranhanif/demo.git'
     }
     stage('build'){
-        sh: 'npm install'
-        sh: 'npm run biuld'
+        npm install
+    
        }
-    stage('nexus'){
-   nexusArtifactUploader artifacts: [[artifactId: 'vitana', classifier: '', file: 'Frontend/package.json', type: 'json']], credentialsId: '045', groupId: '1', nexusUrl: 'nexus.vitalanalytics.net:8081', nexusVersion: 'nexus3', protocol: 'http', repository: 'npm-repo', version: '1'
-     
-   
-       }
+    
 }
